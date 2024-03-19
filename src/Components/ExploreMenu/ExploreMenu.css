@@ -1,0 +1,11 @@
+
+.explore-menu-list::-webkit-scrollbar{
+    display: none;
+}
+#active{
+    border: 2px solid #3a2112 ;
+    padding: 2px;
+    border-radius: 50%;
+}
+
+
