@@ -9,7 +9,7 @@ function ExploreMenu({category,setCategory}) {
     return (
 
         <>
-            <div className='explore-menu space-y-5 ' id='explore-id'>
+            <div className='explore-menu space-y-5 ' id='Menu'>
                 <h1 className='text-2xl'>Explore our menu</h1>
                 <p className='opacity-55 text-balance line-clamp-3'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores est vitae iure deserunt suscipit illum nostrum quod necessitatibus minima repellendus,</p>
                 <div className='explore-menu-list overflow-x-scroll  flex justify-between items-center gap-[30px] text-center '>

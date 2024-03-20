@@ -4,7 +4,7 @@ import { assets } from '../../assets/assets'
 function Footer() {
     return (
         <>
-            <div className='bg-[#323232]'>
+            <div className='bg-[#323232]' id='contact'>
                 <div className='w-full  flex flex-col justify-center items-start space-y-5 p-5 md:flex md:flex-row md:justify-evenly md:  '>
 
                     <div className='space-y-5 md:w-[40%] '>
