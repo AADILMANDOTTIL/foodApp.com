@@ -17,7 +17,7 @@ function LoginPage({setShowLogin}) {
                 {CurState==="Login"?<></>:<input className='outline-none border-2 p-2 rounded' type="text" placeholder='Your name' required />}
                 
                 <input className='outline-none border-2 p-2 rounded' type="text" placeholder='Your email' required />
-                <input className='outline-none border-2 p-2 rounded' type="text" placeholder='Password'required />
+                <input className='outline-none border-2 p-2 rounded' type="password" placeholder='Password'required />
             </div>
             <button className='bg-[#3a2112] p-2 text-white rounded'>{CurState==="Sign up"?"Create Account":"Login"}</button>
             <div className='flex gap-2 items-start justify-center '>
