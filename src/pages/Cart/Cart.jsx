@@ -66,7 +66,7 @@ if(CartItems[item._id]>0)
           <hr />
          
         </div>
-        <button className='border-none text-white bg-[#3a2112] w-[200px] p-[12px] my-10 cursor-pointer rounded'>PROCEED TO CHECKOUT</button>
+        <button className='border-none text-white bg-[#3a2112] w-[200px] p-[6px] my-10 cursor-pointer rounded'>PROCEED TO CHECKOUT</button>
       </div>
       <div className='flex-1 '>
         <div>
