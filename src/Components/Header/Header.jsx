@@ -4,7 +4,7 @@ import '../Header/Header.css'
 function Header() {
   return (
    <>
-   <div  className='header mt-16 z-0  'id='home'>
+   <div  className='header mt-16 z-0   'id='home'>
     <div className='header-contents'>
         <h1 className='text-xs leading-6 md:leading-none'> Order Your favourite food here</h1>
         <p className='hidden md:block text-white text-[1vw]'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae eius ab exercitationem aliquid, numquam quisquam voluptatem. Similique quos commodi tempore autem minus id dolorem, obcaecati maiores quis, cum, modi ratione!</p>

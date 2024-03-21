@@ -14,9 +14,9 @@ function FoodItems({ id, name, description, price, image }) {
                         !CartItems[id] ?
                          <img className='w-[35px] absolute bottom-[15px] right-[15px] cursor-pointer rounded' onClick={() => Ingrement(id)} src={assets.add_icon_white} alt="" srcset="" /> :
                             <div className='absolute bottom-[15px] right-[15px] flex gap-[10px] p-[4px] rounded-full bg-white items-center'>
-                                <img className='w-[30px]' onClick={() => Degrement(id)} src={assets.remove_icon_red} alt="" srcset="" />
+                                <img className='w-[30px] cursor-pointer' onClick={() => Degrement(id)} src={assets.remove_icon_red} alt="" srcset="" />
                                 <p>{CartItems[id]}</p>
-                                <img className='w-[30px]' onClick={() => Ingrement(id)} src={assets.add_icon_green} alt="" srcset="" />
+                                <img className='w-[30px] cursor-pointer' onClick={() => Ingrement(id)} src={assets.add_icon_green} alt="" srcset="" />
                             </div>
                     }
                 </div>

@@ -21,9 +21,12 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/Cart' element={<Cart/>}/>
         <Route path='/order' element={<PlaceHolder/>}/> 
+        
       </Routes>
+      
     </div>
     <Footer/>
+   
     </>
    
   )

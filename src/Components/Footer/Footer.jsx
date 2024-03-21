@@ -1,10 +1,12 @@
 import React from 'react'
 import { assets } from '../../assets/assets'
+import { Link } from 'react-router-dom'
 
 function Footer() {
     return (
         <>
-            <div className='bg-[#323232]' id='contact '>
+       
+        <div className='bg-[#323232]     ' id='contact '>
                 <div className='w-full  flex flex-col justify-center items-start space-y-5 p-5 md:flex md:flex-row md:justify-evenly   '>
 
                     <div className='space-y-5 md:w-[40%] '>
@@ -20,7 +22,7 @@ function Footer() {
                     <div className='space-y-5'>
                         <h1 className='text-[20px] text-white'>COMPANY</h1>
                         <ul className='text-white'>
-                            <li>Home</li>
+                            <Link to='/'>Home</Link>
                             <li>About us</li>
                             <li>Delivery</li>
                             <li>Privacy policy</li>
@@ -43,6 +45,8 @@ function Footer() {
 
             </div>
 
+       
+           
 
         </>
     )
