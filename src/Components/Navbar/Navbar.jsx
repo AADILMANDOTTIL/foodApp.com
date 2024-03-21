@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import '../Navbar/Navbar.css'
 import {assets} from '../../assets/assets'
 import {Link} from 'react-router-dom'
 
 function Navbar({setShowLogin}) {
     const [Menu,SetMenu]=useState("home")
+  
+    
   return (
    <>
    <div className='flex justify-between items-center  p-5 fixed  w-[100%] top-0 h-[50px] z-10 bg-white '>
@@ -19,7 +21,8 @@ function Navbar({setShowLogin}) {
         <img src={assets.search_icon} alt="" srcset="" className='w-[20px]'  />
         <div className='dot1'>
       <Link to='/cart'>  <img src={assets.basket_icon} alt="" srcset="" className='w-[20px]' /></Link>
-        <div className='dot '></div>
+     
+        <div className='dot'></div>
         </div>
        
         <button onClick={()=>setShowLogin(true)} className='bg-transparent ease-in duration-300 text-[#49557e] p-0 md:p-1 md:pl-5 md:pr-5 pl-5 pr-5 rounded-full border-[#3a2112] border-2 hover:bg-[#3a2112] hover:text-white'>Sign in</button>

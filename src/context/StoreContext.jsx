@@ -5,6 +5,7 @@ export const StoreContext = createContext(null)
 
 const StoreContextProvider = (Props) => {
     const [CartItems, setCartItems] = useState({})
+    console.log(CartItems);
     const Ingrement = (itemId) => {
         if (!CartItems[itemId]) {
             setCartItems((prev) => ({ ...prev, [itemId]: 1 }))
@@ -19,16 +20,9 @@ const StoreContextProvider = (Props) => {
 
 
     const remove = (itemId) => {
-        console.log(itemId);
-        const prev=[...food_list]
-        prev.splice(itemId, 1)
-        console.log(prev);
-        setCartItems(prev)
+        setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] = 0 }))
     }
-    // useEffect(()=>{
-
-    // },[CartItems])
-
+  
 
 
 
