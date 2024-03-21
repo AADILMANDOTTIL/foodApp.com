@@ -14,7 +14,7 @@ function FoodDisplay({ category }) {
                     {
                         food_list.map((items, index) => {
                             if (category === 'All' || category === items.category) {
-                                return <FoodItems key={index} id={items.id} name={items.name} description={items.description} price={items.price} image={items.image} />
+                                return <FoodItems key={index} id={items._id} name={items.name} description={items.description} price={items.price} image={items.image} />
                             }
 
 

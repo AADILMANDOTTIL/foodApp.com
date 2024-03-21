@@ -8,7 +8,7 @@ function Navbar({setShowLogin}) {
   return (
    <>
    <div className='flex justify-between items-center  p-5 fixed  w-[100%] top-0 h-[50px] z-10 bg-white '>
-    <img src={assets.logo} alt="" srcset="" className='w-[100px] md:w-[150px]' />
+   <Link to='/'><img src={assets.logo} alt="" srcset="" className='w-[100px] md:w-[150px]' /></Link> 
     <ul className='hidden lg:flex cu gap-[20px] text-[#3a2112] text-[18px] cursor-pointer  '>
         <Link to='/' onClick={()=>SetMenu("home")} className={Menu==="home"?"active":""}>Home</Link>
         <a href='#Menu' onClick={()=>SetMenu("menu")} className={Menu==="menu"?"active":""}>Menu</a>
@@ -18,7 +18,7 @@ function Navbar({setShowLogin}) {
     <div className=' flex items-center gap-[15px] md:gap-[40px] cursor-pointer'>
         <img src={assets.search_icon} alt="" srcset="" className='w-[20px]'  />
         <div className='dot1'>
-        <img src={assets.basket_icon} alt="" srcset="" className='w-[20px]' />
+      <Link to='/cart'>  <img src={assets.basket_icon} alt="" srcset="" className='w-[20px]' /></Link>
         <div className='dot '></div>
         </div>
        

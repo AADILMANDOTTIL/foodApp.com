@@ -7,7 +7,7 @@ function LoginPage({setShowLogin}) {
     
   return (
     <>
-    <div className='absolute z-[1] w-[100%] h-[100%] bg-[#00000090] grid'>
+    <div className='absolute z-[10] w-[100%] h-[100%] bg-[#00000090] grid'>
         <form className='login-popup-container'>
             <div className='flex justify-between items-center text-black text-2xl font-[500]'>
                 <h1>{CurState}</h1>
