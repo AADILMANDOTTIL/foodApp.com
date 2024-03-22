@@ -1,13 +1,14 @@
 import React, { useContext } from 'react'
 import { assets } from '../../assets/assets'
 import { StoreContext } from '../../context/StoreContext'
+import '../FoodItems/FoodItems.css'
 
 function FoodItems({ id, name, description, price, image }) {
     const { CartItems, Ingrement, Degrement } = useContext(StoreContext)
    
     return (
         <>
-            <div className=' w-[100%] shadow-lg'>
+            <div className=' w-[100%] shadow-lg read'>
                 <div className='relative'>
                     <img className='rounded-t-lg' src={image} alt="" srcset="" />
                     {
@@ -28,7 +29,9 @@ function FoodItems({ id, name, description, price, image }) {
                     <p className='text-[12px]  text-[#676767]'>{description}</p>
                     <p className=' text-xl text-[#3a2112]'>${price}</p>
                 </div>
+               
             </div>
+           
         </>
     )
 }

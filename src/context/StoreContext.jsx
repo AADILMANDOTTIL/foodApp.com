@@ -7,6 +7,31 @@ const StoreContextProvider = (Props) => {
     const [CartItems, setCartItems] = useState({})
     const [Promo, setPromo] = useState("")
     const [data, setData] = useState("")
+
+    const [searchdata, setsearchData] = useState([])
+    const [searchValue, setSearchValue] = useState("")
+    const [filterValue, SetFilterValue] = useState(searchdata)
+console.log(food_list);
+
+    useEffect(() => {
+       setsearchData(food_list)
+      }, [])
+
+      const onchange = (event) => {
+        const result = event.target.value.toLocaleLowerCase()
+        setSearchValue(result)
+        console.log(result);
+      }
+
+      useEffect(() => {
+        const newData = searchdata.filter((value) => {
+          return value.name.toLocaleLowerCase().includes(searchValue)
+        })
+        SetFilterValue(newData)
+        console.log(newData);
+    
+      }, [searchdata,searchValue])
+    
     const Ingrement = (itemId) => {
         if (!CartItems[itemId]) {
             setCartItems((prev) => ({ ...prev, [itemId]: 1 }))
@@ -70,7 +95,9 @@ const discount = () => {
         setPromo,
         Promo,
         discount,
-        discountValue
+        discountValue,
+        onchange,
+        filterValue
         
 
     }

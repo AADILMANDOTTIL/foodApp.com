@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import '../Header/Header.css'
+// import { CiSearch } from "react-icons/ci";
+import { StoreContext } from '../../context/StoreContext';
 
 function Header() {
+  // const {onchange}=useContext(StoreContext)
   return (
    <>
+     {/* <div className='mt-[70px] top-[30%] flex justify-center items-center '>
+   <div className='absolute flex items-center rounded-full border-[1px] border-black w-[300px] md:w-[600px] h-[40px] p-5 shadow-xl '>
+    <input onChange={onchange} className=' flex-1 h-[40px]  rounded-full   outline-none text-[18px] ' type="text"  />
+    <CiSearch className='bg-white text-[25px] text-[#777]' />
+
+   </div>
+   </div> */}
    <div  className='header mt-16 z-0   'id='home'>
     <div className='header-contents'>
         <h1 className='text-xs leading-6 md:leading-none'> Order Your favourite food here</h1>

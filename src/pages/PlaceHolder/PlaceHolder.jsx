@@ -66,7 +66,7 @@ function PlaceHolder() {
 
 
               </div>
-              <button onClick={() => navigate('/order')} className='border-none text-white bg-[#3a2112] w-[200px] text-[13px] p-[6px] my-10 cursor-pointer rounded'>PROCEED TO CHECKOUT</button>
+              <button onClick={() => navigate('/order')} className='border-none text-white bg-black w-[200px] text-[13px] p-[6px] my-10 cursor-pointer rounded'>PROCEED TO PAYMENT</button>
             </div>
           </div>
         </form>
