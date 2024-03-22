@@ -24,7 +24,7 @@ function FoodDisplay({ category }) {
                 </div>
             </div>
             <div>
-                <h1 className='text-2xl mt-[80px] text-center'>Top dishes near you</h1>
+                <h1 className='text-2xl  text-center'>Top dishes near you</h1>
                 <div className='pt-5 food-list'>
                     {
                         filterValue.slice(0, visible).map((items, index) => {
