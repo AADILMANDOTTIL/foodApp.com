@@ -10,6 +10,7 @@ import LoginPage from './Components/LoginPage/LoginPage'
 
 function App() {
   const [ShowLogin,setShowLogin]=useState(false)
+
   return (
     <>
    
@@ -19,7 +20,7 @@ function App() {
       
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/Cart' element={<Cart/>}/>
+        <Route path='/Cart' element={<Cart S/>}/>
         <Route path='/order' element={<PlaceHolder/>}/> 
         
       </Routes>

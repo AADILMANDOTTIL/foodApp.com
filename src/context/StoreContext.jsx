@@ -5,7 +5,8 @@ export const StoreContext = createContext(null)
 
 const StoreContextProvider = (Props) => {
     const [CartItems, setCartItems] = useState({})
-    console.log(CartItems);
+    const [Promo, setPromo] = useState("")
+    const [data, setData] = useState("")
     const Ingrement = (itemId) => {
         if (!CartItems[itemId]) {
             setCartItems((prev) => ({ ...prev, [itemId]: 1 }))
@@ -25,15 +26,37 @@ const StoreContextProvider = (Props) => {
   
 const getTotalAmount=()=>{
     let totalAmount=0
+
+   
     for(const item in CartItems){
         if(CartItems[item]>0){
-            let itemInfo=food_list.find((product)=>product._id===item)
+            let itemInfo=food_list.find((product)=>product._id===item);
             totalAmount +=itemInfo.price*CartItems[item]
+          
+           
+
         }
+       
+
     }
     return totalAmount
 }
 
+const discountValue=()=>{
+let discountValue=0
+if(data==='ADL10'){
+    discountValue=-10
+}
+return discountValue
+}
+
+const discount = () => {
+    let value = 0
+    if (data === "ADL10") {
+      value = getTotalAmount() - 10
+    }
+    return value
+  }
 
     const contextValue = {
         food_list,
@@ -42,7 +65,13 @@ const getTotalAmount=()=>{
         Degrement,
         Ingrement,
         remove,
-        getTotalAmount
+        getTotalAmount,
+        setData,
+        setPromo,
+        Promo,
+        discount,
+        discountValue
+        
 
     }
     return (
