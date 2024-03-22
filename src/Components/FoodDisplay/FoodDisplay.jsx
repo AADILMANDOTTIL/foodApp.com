@@ -6,25 +6,25 @@ import '../FoodDisplay/FoodDisplay.css'
 import { CiSearch } from "react-icons/ci";
 
 function FoodDisplay({ category }) {
-    const { filterValue ,onchange} = useContext(StoreContext)
+    const { filterValue, onchange } = useContext(StoreContext)
     const [visible, setVisible] = useState(12)
 
     const ShowMore = () => {
-       setVisible((prev)=>prev+prev)
+        setVisible((prev) => prev + prev)
 
     }
     return (
         <>
 
-<div className='mt-[80px] top-[30%] flex justify-center items-center '>
-   <div className='absolute flex items-center rounded-full border-[1px] border-black w-[300px] md:w-[600px] h-[40px] p-5 shadow-xl '>
-    <input onChange={onchange} className=' flex-1 h-[40px]  rounded-full   outline-none text-[18px] ' type="text"  />
-    <CiSearch className='bg-white text-[25px] text-[#777] cursor-pointer' />
+            <div className='mt-[60px]  flex justify-center items-center '>
+                <div className=' flex items-center rounded-full border-[1px] border-black w-[300px] md:w-[600px] h-[40px] p-5 shadow-xl '>
+                    <input onChange={onchange} className=' flex-1 h-[40px]  rounded-full   outline-none text-[18px] ' type="text" />
+                    <CiSearch className='bg-white text-[25px] text-[#777] cursor-pointer' />
 
-   </div>
-   </div>
+                </div>
+            </div>
             <div>
-                <h1 className='text-2xl mt-16 text-center'>Top dishes near you</h1>
+                <h1 className='text-2xl mt-[80px] text-center'>Top dishes near you</h1>
                 <div className='pt-5 food-list'>
                     {
                         filterValue.slice(0, visible).map((items, index) => {
