@@ -27,7 +27,11 @@ function FoodItems({ id, name, description, price, image }) {
                         <img className='h-[15px]' src={assets.rating_starts} alt="" />
                     </div>
                     <p className='text-[12px]  text-[#676767]'>{description}</p>
+                    <div className='flex justify-between p-2'>
                     <p className=' text-xl text-[#3a2112]'>${price}</p>
+                    <button onClick={() => Ingrement(id)} className='bg-black text-white w-[100px] p-1 rounded'>Order Now</button>
+                    </div>
+                    
                 </div>
                
             </div>
